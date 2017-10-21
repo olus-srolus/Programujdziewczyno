@@ -1,22 +1,28 @@
-console.log("działa!")
+    'use strict';
 
-var myName = 'Ola';
+document.addEventListener('DOMContentLoaded', function() {
 
-console.log(myName);
+    console.log("działa")
+ 
 
-var myFriends = ['Kasia', 'Ola', 'Basia', 'Milena'];
-console.log(myFriends);
+var elementWithDropdown = document.querySelector('.for-dropdown');
+console.log(elementWithDropdown);
 
-for (var i = 0; i <= myFriends.length-1; i++) {
-console.log(myFriends[i]);
-}
-
-var a = 9;
-var b = 15;
-
-if (a>b) {
-    console.log("hurra!!!!!!");
-} else {
-    console.log(":C");
-};
-
+var dropdown = document.querySelector('.dropdown');
+console.log(dropdown);
+    
+    elementWithDropdown.addEventListener('mouseover', function() {
+         console.log('myszka jest tu');
+        
+        dropdown.style.display = "block";
+        
+    });
+        
+    elementWithDropdown.addEventListener('mouseout', function() {
+         console.log('myszki ni ma');
+        
+        dropdown.style.display = "none";
+        
+        
+      });
+       });
